@@ -3,6 +3,7 @@ import Layout from '@/components/Layout';
 import PostAuthor from '@/components/PostAuthor';
 import PostMetaTitle from '@/components/PostMetaTitle';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Detail() {
     return (
@@ -21,7 +22,13 @@ export default function Detail() {
                     <PostAuthor authorName='Leslie Alexander' authorJob='UI Designer' authorAvatar='/author-1.png' />
                 </div>
                 <div className='md:w-10/12 w-full mx-auto my-10'>
-                    <img src='/detail-image.png' alt='thumbnail' className='w-full rounded-lg' />
+                    <Image
+                        src='/detail-image.png'
+                        width={1000}
+                        height={1000}
+                        alt='thumbnail'
+                        className='w-full rounded-lg'
+                    />
                 </div>
                 <div className='md:w-8/12 w-full mx-auto leading-relaxed'>
                     <p className='text-xl mb-4'>

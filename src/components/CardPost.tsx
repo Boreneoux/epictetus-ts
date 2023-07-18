@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import InfoPost from './InfoPost';
 
 interface CardPostProps {
@@ -16,7 +17,13 @@ export default function CardPost(prop: CardPostProps) {
     return (
         <article>
             <Link href='/detail'>
-                <img src={prop.thumbnail} className='w-full rounded mb-4' />
+                <Image
+                    src={prop.thumbnail}
+                    alt='thumbnail'
+                    width={1000}
+                    height={1000}
+                    className='w-full rounded mb-4'
+                />
             </Link>
             <InfoPost {...prop} />
         </article>
